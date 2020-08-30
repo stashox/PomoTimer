@@ -83,10 +83,10 @@ div#hrs {
     margin: auto;
 }
 div#botoes {
-    margin: auto;
-    font: normal 20pt Arial;
-    size: 1px; 
-
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 div {
     text-align: center;
