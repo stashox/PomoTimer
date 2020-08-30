@@ -1,2 +1,2 @@
 # Pomotimer
- Timer pomodoro feito com JavaScript
+ Timer pomodoro feito com JavaScript para fins didáticos // https://stashox.github.io/Pomodoro/
