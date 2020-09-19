@@ -70,13 +70,13 @@ function voltarContador(){
     document.getElementById("botao3").disabled = true;
     document.getElementById("botao2").disabled = false;
     document.getElementById("botao4").disabled = true;
-    var m = t_minutos.innerHTML.slice(-2);
-    var s = t_segundos.innerHTML.slice(-2);
+    let m = t_minutos.innerHTML;
+    let s = t_segundos.innerHTML;
     contador = setInterval(function() {
-        t_minutos.innerHTML = (m > 9) ? ('' + m) : ('' + m);
+        t_minutos.innerHTML = (m > 9) ? ('' + m) : ('0' + m);
         t_segundos.innerHTML = (s > 9) ? ('' + s) : ('0' + s);
         if (s > 0) {s -= 1 } 
-        else if (s == 0 && m > 0) { s = 59; m -= 1; }
+        else if (s == 0 && m > 0) { s = 59; m -= 1;}
         else if (s == 0 & m == 0) {[notificacao()]; [sound()]; [pararContador()]; [fechar()] ; document.getElementById("botao4").disabled = true;}
         else {m.slice(-1) = tempo.value}
         }, 1000);

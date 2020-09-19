@@ -2,51 +2,26 @@
 div#botoesextras {
     height: 70px;
 }
-div#area { /* Eu poderia ter colocado isso no .css, mas nao tinha conhecimento na época */
-    background: rgb(87, 87, 87);
-    color: rgb(255, 255, 255);
-    font-family: 'Overpass', sans-serif;
-    font-size: 20pt;
-    width: 230px;
-    height: 50px;
-    background-image: linear-gradient( to top, rgb(134, 31, 0), rgb(182, 0, 0)); /* modelo de gradiente pro css */
-    line-height: 50px;
-    border-radius: 17px; /* borda */
-    text-align: center; /* alinha o texto */
-    margin: 0 auto 0 auto; /* pra alinhar o retangulo */
-}
 body {
-    background: rgb(129, 4, 0);
+    background: #8F1D20;
     font: normal 20pt Arial;
 }   
 
 header {
-    color: white;
+    color: #f7f7f7;
     text-align: center;
 }
 
 section {
     text-align: center;
     position: relative;
-    background: white;
-    border-radius: 15px;
+    background: #f7f7f7;
+    border-radius: 8px;
     padding: 10px;
     width: auto;
     max-width: 400px;
     margin:0 auto;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.527);
-
-}
-nav#tabs {
-    margin: 0;
-    padding: 0;
-    width: 600px;
-    height: 400px;
-    margin: 100px auto;
-    background-color: rgb(175, 26, 26);
-    position: relative;
-    border-radius: 15px;
-    float: left;
+    box-shadow: 0px 5px 1px rgb(163, 163, 163);
 }
 div#contador{
     font-family: 'Overpass', sans-serif;
@@ -60,11 +35,9 @@ div#brk {
 }
 nav#barra {
     height: 40px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.349);
-}
-a#barra2 {
-    font-family: 'Overpass', sans-serif;
-    font-size: 16pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 body h1{
     font-family: 'Overpass', sans-serif;
@@ -93,7 +66,7 @@ div {
 }
 footer {
     font: normal 9pt Arial;
-    color: white;
+    color: #f7f7f7;
     text-align: center;
     font-style: italic;
     margin: auto;
