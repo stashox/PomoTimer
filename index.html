@@ -23,7 +23,7 @@
         <div id = "brk">
         </div>
         <div id = "botoesextras">
-        <button type="button" class="btn btn-danger" id="pomodorii" data-toggle="modal" data-target="#pomodori">
+        <button type="button" class="btn btn-danger" id="inserirTempoBtn" data-toggle="modal" data-target="#pomodori">
             Pomodori
             </button>
         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#break">
@@ -42,7 +42,7 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="fecharbreak()">Começar!</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="startBreak()">Começar!</button>
               </div>
             </div>
           </div>
@@ -60,7 +60,7 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-                  <button type="button" id="btncomeçar" class="btn btn-danger" data-dismiss="modal" onclick="fechar()">Começar!</button>
+                  <button type="button" id="btncomeçar" class="btn btn-danger" data-dismiss="modal" onclick="inserirTempo()">Começar!</button>
                 </div>
               </div>
             </div>
@@ -69,18 +69,12 @@
             <p>
                 <span id = "timer_minutos">25</span> :
                 <span id = "timer_segundos">00</span>
-            </div>
-            <div id = "botoes">
-              <div id="botoescima">
-                <button type="button" class="btn btn-danger" id="botao" onclick="iniciarContador();desabilitaBotao()">Começar!</button>
-                <button type="button" class="btn btn-warning" onclick="pararContador()" id = "botao2">Pausar!</button>
-              </div>
-              <div id="botoesbaixo">
-                <button type="button" id = "botao3" onclick="voltarContador()" class="btn btn-info">Retomar!</button>
-                <button type="button" id = "botao4" onclick="zerar()" class="btn btn-dark">Zerar!</button>
-              </div>
-                
             </p>
+        </div>
+        <div id = "botoes">
+                <button type="button" class="btn btn-danger" id="botao" onclick="startContador()">Começar!</button>
+                <button type="button" class="btn btn-warning" onclick="pararContador()" id = "botao2">Pausar!</button>
+                <button type="button" id = "botao4" onclick="zerar()" class="btn btn-dark">Zerar!</button>
         </div>
     </section>
     <footer id ="rodape">

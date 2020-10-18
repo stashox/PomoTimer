@@ -69,23 +69,10 @@ div#botoes {
     font: normal 20pt Arial;
     size: 1px; 
     display: flex;
-    flex-direction: column;
+    flex-direction: row ;
 }
-div #botoescima{
-    width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    float: right;
-    margin-bottom: 15px;
-    
-}
-div #botoesbaixo{
-    width: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    float: right;
+#botoes button{
+    margin: .2rem;
 }
 div {
     text-align: center;
