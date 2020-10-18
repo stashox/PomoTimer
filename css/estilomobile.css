@@ -71,27 +71,14 @@ div#botoes {
     display: flex;
     flex-direction: column;
 }
-div #botoescima{
-    width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    float: right;
-    margin-bottom: 15px;
-    
-}
-div #botoesbaixo{
-    width: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    float: right;
+#botoes button{
+    margin: .2rem;
 }
 div {
     text-align: center;
 }
 footer {
-    font: normal 9pt Arial;
+    font: normal 6pt Arial;
     color: #f7f7f7;
     text-align: center;
     font-style: italic;
