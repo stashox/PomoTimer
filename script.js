@@ -11,6 +11,18 @@ function startBreak() {
     };
     t_minutos.innerHTML = ((pausa.value) > 9) ? ('' + (pausa.value)) : ('0' + (pausa.value));
     t_segundos.innerHTML = '00';
+    clearInterval(contador) == true;
+    let m = t_minutos.innerHTML;
+    let s = t_segundos.innerHTML;
+    contador = setInterval(function() {
+        t_minutos.innerHTML = (m > 9) ? ('' + m) : ('' + m);  //pq não consigo usar m no lugar desse t_minutos.innerHTML??
+        t_segundos.innerHTML = (s > 9) ? ('' + s) : ('0' + s);
+        if (s > 0) {s -= 1 } 
+        else if (s == 0 && m > 0) { s = 59; m -= 1;}
+        else if (s == 0 & m == 0) {[notificacao()]; [sound()]; [pararContador()]; [startContador()]}
+        else {m = tempo.value}                                                                     
+        }, 1000);
+    desabilitaBotao("btncomeçar");
 };
 
 function inserirTempo() {
@@ -43,7 +55,7 @@ function startContador(){
     let m = t_minutos.innerHTML;
     let s = t_segundos.innerHTML;
     contador = setInterval(function() {
-        t_minutos.innerHTML = (m > 9) ? ('' + m) : ('0' + m);  //pq não consigo usar m no lugar desse t_minutos.innerHTML??
+        t_minutos.innerHTML = (m > 9) ? ('' + m) : ('' + m);  //pq não consigo usar m no lugar desse t_minutos.innerHTML??
         t_segundos.innerHTML = (s > 9) ? ('' + s) : ('0' + s);
         if (s > 0) {s -= 1 } 
         else if (s == 0 && m > 0) { s = 59; m -= 1;}

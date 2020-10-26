@@ -77,6 +77,98 @@ div#botoes {
 div {
     text-align: center;
 }
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    background: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    white-space: normal;
+    text-align: center;
+  }
+  
+  form input, form label, form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  form input {
+    font-size: 24px;
+    height: 50px;
+    padding: 0 20px;
+  }
+  
+  form input:focus {
+    outline: 1px solid var(--primary-color);
+  }
+  .container h1{
+      font-family: 'Overpass', sans-serif;
+      font-size: 1.5em;
+  }
+  .input-tarefas{
+    border-radius: 3px;
+    border: none;
+    background-color: #fff;
+    box-shadow: 0px 1.5px 0px rgb(163, 163, 163);
+    height: 2rem;
+    width: 70%;
+    font-size: 0.5em;
+    outline-style: none;
+  }
+  .btn-tarefa{
+    border: none;
+    height: 2rem;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0px 1.5px 0px rgb(163, 163, 163);
+    cursor: pointer;
+    font-size: 0.5em;
+    outline: none;
+  }
+  .lista li{
+    background-color: #fff;
+    box-shadow: 0px 1.5px 0px rgb(163, 163, 163);
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 0.3rem;
+    display: flex;
+    align-items: center;
+    white-space: normal;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1rem;
+    text-align: justify;
+    word-break: break-word;
+    font-size: 0.8em;
+    min-height: 3rem;
+    height: auto;
+  }
+  .apagar{
+    margin-right: 1rem;
+    margin-left: 1rem;
+    border: none;
+    background-color: #8F1D20;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 900;
+  }
+  form button {
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 30px;
+  }
+  
+  form button:hover {
+    background: var(--primary-color-darker);
+  }
 footer {
     font: normal 9pt Arial;
     color: #f7f7f7;

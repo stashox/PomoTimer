@@ -77,12 +77,23 @@
                 <button type="button" id = "botao4" onclick="zerar()" class="btn btn-dark">Zerar!</button>
         </div>
     </section>
+
+    <section class="container">
+      <h1>Lista de Tarefas</h1>
+      <p>
+        <input type="text" class="input-tarefas" name="tarefas" id="input-tarefa"> 
+        <button class="btn-tarefa">Adicionar</button>
+      </p>
+      <div class="tarefas"></div>
+    </section>
+
     <footer id ="rodape">
         <p>"Mantenha o seu foco no melhor que você <br> 
           possa imaginar e permita que uma visão <br> 
           positiva o impulsione para frente!"<br>
           -Jack Anderson</p>
     </footer>
+    <script src="./main.js"></script>
     <script src="./script.js">
     $('#myModal').on('shown.bs.modal', function () {
     $('#myInput').trigger('focus')
