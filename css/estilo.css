@@ -19,7 +19,7 @@ section {
     border-radius: 8px;
     padding: 10px;
     width: auto;
-    max-width: 22vw;
+    max-width: 500px;
     margin:0 auto;
     box-shadow: 0px 5px 1px rgb(163, 163, 163);
 }
@@ -68,7 +68,7 @@ div {
     text-align: center;
 }
 .container {
-  max-width: 22vw;
+  max-width: 500px;
   margin: 50px auto;
   background: #f7f7f7;
   padding: 20px;
