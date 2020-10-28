@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <link rel="icon" href="./img/logo.png">
-  <nav class="navbar fixed-top navbar-light bg-light" id="barra">
-    <a class="navbar-brand" href="https://github.com/stashox/PomoTimer" id = "barra2"> Check it out on my GitHub!</a>
+  <link rel="icon" href="./img/logo2.png">
   </nav>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,10 +14,11 @@
 <body id = "tudo">
   <audio src="./sound/sound.wav" id="som"></audio>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <header>
+    <header class="topo">
+        <img src="/img/logo2.png">
         <h1>PomoTimer!</h1>
     </header>
-    <section>
+    <section class="timer">
         <div id = "brk">
         </div>
         <div id = "botoesextras">
@@ -39,10 +38,12 @@
               <div class="modal-body" id = "brk">
                 <p>Escolha o seu <strong>BREAK</strong>!</p>
                 <input type="number" value="5" min="0" name="pp" id="pp"> </p>
+                <p>Escolha o seu <strong>LONG BREAK</strong>!</p>
+                <input type="number" value="15" min="0" name="lp" id="lp"> </p>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="startBreak()">Começar!</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="inserirBreak()">Começar!</button>
               </div>
             </div>
           </div>
@@ -57,6 +58,8 @@
                 <div class="modal-body" id = "contador">
                 <p>Escolha a duração de cada <strong>POMODORI</strong>!</p>
                 <input type="number" value="25" name="txtano" id="tempo" min = "0">
+                <p>Escolha a quantidade de <strong>CICLOS</strong>!</p>
+                <input type="number" value="4" name="txtciclo" id="ciclos" min = "0">
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
@@ -72,9 +75,9 @@
             </p>
         </div>
         <div id = "botoes">
-                <button type="button" class="btn btn-danger" id="botao" onclick="startContador()">Começar!</button>
-                <button type="button" class="btn btn-warning" onclick="pararContador()" id = "botao2">Pausar!</button>
-                <button type="button" id = "botao4" onclick="zerar()" class="btn btn-dark">Zerar!</button>
+          <a id="botao" onclick="startContador()" title="Play"><img src="img/play-btn.svg"></a>
+          <a id="botao2" onclick="pararContador()" title="Pause"><img src="img/pause-btn.svg"></a>
+          <a id="botao4" onclick="zerar()" title="Restart"><img src="img/restart-btn.svg"></a>
         </div>
     </section>
 
@@ -87,12 +90,56 @@
       <div class="tarefas"></div>
     </section>
 
-    <footer id ="rodape">
-        <p>"Mantenha o seu foco no melhor que você <br> 
-          possa imaginar e permita que uma visão <br> 
-          positiva o impulsione para frente!"<br>
-          -Jack Anderson</p>
-    </footer>
+    <div id ="frase">
+      <p>"Mantenha o seu foco no melhor que você <br> 
+        possa imaginar e permita que uma visão <br> 
+        positiva o impulsione para frente!"<br>
+        -Jack Anderson</p>
+    </div>
+
+    <section class="infos">
+      <div class="info1">
+        <h1>O que é o Método Pomodoro?</h1>
+        <p>A Técnica Pomodoro é um método de manuseio de tempo e aumento foco desenvolvido por Francesco Cirillo no final dos anos 1980. A técnica consiste na utilização de um temporizador para dividir o trabalho em ciclos  de 25 minutos, separados por breves intervalos. O processo  consiste em focar numa tarefa por 25 minutos e, após esse tempo, decansar por 5. Após 4 ciclos de 25 minutos, orienta-se descansar por um período mais longo, de padrão 15 minutos. O método é empregado por diversas pessoas, seja para estudar ou trabalhar, principalmente as que costumam procrastinar, pois o método oferece curtos espaços de foco e frequentes descansos, tornando as atividades desempenhadas mais flexíveis. Para melhor aproveitamento do método, recomenda-se seguir rigorosamente os tempos, deixando de lado possíveis distrações. Como cada pessoa funciona diferente, o PomoTimer oferece a opção de personalização dos períodos de foco e de descanso, tal como o número de ciclos e a duração do <strong>Long Break</strong>.
+        </p>
+      </div>
+      <div class="info1">
+        <h1>O que é o PomoTimer?</h1>
+        <p>PomoTimer é um aplicativo web open source desenvolvido por mim, Pedro Franco, como um projeto para fins de estudo. No ensejo, enxerguei a oportunidade não só de aumentar meu conhecimento com um projeto real, mas também de poder ajudar às pessoas da minha faixa etária, que estão estudando e precisam se organizar. Sempre estou disposto a ouvir o FeedBack dos usuários e implementar recursos novos. Caso queira saber como usar o PomoTimer, <a href="tutorial.html">clique aqui</a>.
+        </p>
+      </div>
+      <div class="info1 dica">
+        <h1>Dica #1</h1>
+        <p>Por mais que tenha um botão de "Pause" ali, recomenda-se que os ciclos sejam feitos inteiramente <strong>SEM INTERRUPÇÃO!</strong>, pause apenas se realmente precisar.
+        </p>
+      </div>
+      <div class="info1, dica">
+        <h1>Dica #2</h1>
+        <p>Planeje-se antes de começar. É importante esse planejamento para evitar pausas durante os ciclos. Vá ao banheiro, arrume a casa, pegue água, comida. O importante é estar focado.
+        </p>
+      </div>
+      <div class="info1, dica">
+        <h1>Dica #3</h1>
+        <p>Afaste-se de distrações! O método busca evitar a procrastinação, e o tempo de 25 minutos é flexível e curto justamente para evitar outras "tarefas" durante os ciclos. Acho que dá pra se segurar durante 25 minutos, não é? ;)
+        </p>
+      </div>
+      <div class="info1, dica">
+        <h1>Dica #4</h1>
+        <p>Durante o intervalo de 5 minutos entre os ciclos, evite o uso de eletrônicos e outros passatempos. O ideal no descanso é beber água, usar o banheiro ou apenas relaxar.
+        </p>
+      </div>
+      <div class="info1, dica">
+        <h1>Dica #5</h1>
+        <p>Escreva o que você tem que fazer. Visualizar seus objetivos e suas tarefas ajuda a se manter focado, após finalizar, apague-as. Ver a lista diminuindo pode dar uma motivação a mais para se manter mais focado e terminar logo!
+        </p>
+      </div>
+      <div class="info1, dica">
+        <h1>Dica #6</h1>
+        <p>Organize seu espaço! Ter um ambiente arrumado e livre de distrações ajuda no foco. Se for preciso, estude em outro cômodo, numa biblioteca ou algum outro lugar sem barulho/distrações.
+        </p>
+      </div>
+    </section>
+
     <script src="./js/main.js"></script>
     <script src="./js/script.js">
     $('#myModal').on('shown.bs.modal', function () {
