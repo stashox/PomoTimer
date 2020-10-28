@@ -26,7 +26,7 @@ function startContador(){
         }; 
         timerr = `${t_minutos.innerHTML}:${t_segundos.innerHTML}`
         timerAba(timerr);                                                                   
-        }, 10);
+        }, 1000);
     desabilitaBotao("btncomeçar");
 }
 
@@ -43,7 +43,7 @@ function startBreak(){
         else {m = tempo.value}  
         timerr = `${t_minutos.innerHTML}:${t_segundos.innerHTML}`
         timerAba(timerr);                                                                     
-        }, 10);
+        }, 1000);
     desabilitaBotao("btncomeçar");
 }
 
