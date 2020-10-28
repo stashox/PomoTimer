@@ -5,28 +5,97 @@ div#botoesextras {
 body {
     background: #8F1D20;
     font: normal 20pt Arial;
-}   
-
-header {
-    color: #f7f7f7;
-    text-align: center;
 }
-
-section {
+#arrow-back{
+  width: 2.5rem;
+  height: 2.5rem;
+  top: 5vh;
+  left: 1.5vw;
+  position: relative;
+}
+#tuto-texto{
+  width: 50%;
+  font-size: 2.5em;
+  border-bottom: 1px solid rgb(192, 192, 192);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.topo-page2{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.fotos-tuto{
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fotos-tuto h1{
+  color: #fff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fotos-tutos{
+  width: 50%;
+  height: auto;
+  flex-direction: column;
+}
+.fotos-tutos img{
+  width: 30rem;
+  height: 30rem;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px black;
+  margin-top: 5vh;
+}
+.topo {
+  color: #f7f7f7;
+  text-align: center;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 5vh;
+}
+.topo h1{
+  height: auto;
+  width: auto;
+}
+.topo img{
+  height: 2.5rem;
+  width: auto;
+  margin-right: .5rem;
+}
+.timer{
     text-align: center;
     position: relative;
     background: #f7f7f7;
     border-radius: 8px;
     padding: 10px;
     width: auto;
-    max-width: 500px;
+    max-width: 360px;
     margin:0 auto;
     box-shadow: 0px 5px 1px rgb(163, 163, 163);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 div#contador{
     font-family: 'Overpass', sans-serif;
     font-size: 16pt;
     text-align: left;
+}
+#tempo{
+  margin-bottom: 1.5rem;
 }
 div#brk {
     font-family: 'Overpass', sans-serif;
@@ -45,7 +114,6 @@ body h1{
     font-weight: 600;
 }
 body#tudo {
-    padding: 60px;
     margin: auto;
 }
 div#hrs {
@@ -56,25 +124,26 @@ div#hrs {
     margin: auto;
 }
 div#botoes {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 70%;
+    float: right;
 }
-#botoes button{
-    margin-right: .5rem;
+#botoes img{
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
 }
 div {
     text-align: center;
 }
 .container {
-  max-width: 500px;
+  max-width: 360px;
   margin: 50px auto;
   background: #f7f7f7;
   padding: 20px;
   border-radius: 10px;
   white-space: normal;
   text-align: center;
+  box-shadow: 0px 5px 1px rgb(163, 163, 163);
 }
 
 form input, form label, form button {
@@ -160,10 +229,43 @@ form button {
 form button:hover {
   background: var(--primary-color-darker);
 }
-footer {
+
+.infos{
+  width: 100%;
+  background-color: #212529;
+  color: #fff;
+  height: auto;
+  padding: 5vh 0 5vh 0;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.info1, .dica{
+  width: 360px;
+}
+.dica{
+  margin-top: 5vh;
+}
+.dica h1{
+  text-align: left;
+  font-size: 1em !important;
+}
+.infos h1{
+  font-size: 1.5em;
+  border-bottom: .5px solid rgb(63, 63, 63);
+}
+.infos p{
+  font-size: .5em;
+  text-align: justify;
+  text-decoration: none;
+}
+#frase {
     font: normal 9pt Arial;
     color: #f7f7f7;
     text-align: center;
     font-style: italic;
     margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
 }
