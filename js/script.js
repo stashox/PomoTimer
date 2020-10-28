@@ -65,7 +65,7 @@ function inserirBreak(){
     if (ciclo != (meta.value)) {
         var pausa = document.getElementById('pp')
         var longpausa = document.querySelector('#lp');
-        if (pausa.value < 1 || pausa.value % 1 != 0) {
+        if (pausa.value < 1 || pausa.value % 1 != 0 || longpausa.value < 1 || longpausa.value % 1 != 0) {
             alert('Número inválido');
             window.location.reload()
         };
@@ -73,10 +73,6 @@ function inserirBreak(){
         t_segundos.innerHTML = '00';
         startBreak();
     }
-        if (longpausa.value < 1 || longpausa.value % 1 != 0) {
-            alert('Número inválido');
-            window.location.reload()
-        };
 }
 
 function notificacao(){
