@@ -3,19 +3,19 @@
     "name": "Pomotimer!: A pomodoro method app",
     "icons": [
     {
-    "src": "./img/logo4.png",
+    "src": "./img/apple-touch-icon.png",
     "type": "image/png",
     "sizes": "192x192",
     "purpose": "any maskable"
     },
     {
-    "src": "./img/logo3.png",
+    "src": "./img/apple-touch-icon.png",
     "type": "image/png",
     "sizes": "512x512",
     "purpose": "any maskable"
     }
     ],
-    "start_url": "/index.html",
+    "start_url": "/PomoTimer",
     "background_color": "#8F1D20",
     "display": "fullscreen",
     "orientation": "portrait",
