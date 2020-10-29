@@ -1,2 +1,2 @@
 # Pomotimer
- Timer pomodoro feito com JavaScript // Branch destinado ao github pages, favor considerar apenas o branch master.
+ Timer pomodoro feito com JavaScript para fins didáticos // https://stashox.github.io/PomoTimer/

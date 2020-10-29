@@ -5,17 +5,21 @@
   </nav>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#8F1D20"/>
     <title id = "aba">PomoTimer!</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./bootstrap.min.css">
     <link rel="stylesheet" href="./estilo.css"> <!---mudança de layout conforme resolução-->
     <link rel="stylesheet" media="screen and (max-width: 400px)" type="text/css" href="./estilomobile.css"/>
     <link rel="stylesheet" media="screen and (min-width: 400px) and (max-width: 520px)" type="text/css" href="./estilomobile2.css"/>
+    <link rel="manifest" href="./manifest.json">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
 </head>
 <body id = "tudo">
   <audio src="./sound.wav" id="som"></audio>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <header class="topo">
-        <img src="./logo2.png">
+        <img src="/logo2.png">
         <h1>PomoTimer!</h1>
     </header>
     <section class="timer">
@@ -75,9 +79,9 @@
             </p>
         </div>
         <div id = "botoes">
-          <a id="botao" onclick="startContador()" title="Play"><img src="./play-btn.svg"></a>
-          <a id="botao2" onclick="pararContador()" title="Pause"><img src="./pause-btn.svg"></a>
-          <a id="botao4" onclick="zerar()" title="Restart"><img src="./restart-btn.svg"></a>
+          <a id="botao" onclick="startContador()" title="Play"><img src="/play-btn.svg"></a>
+          <a id="botao2" onclick="pararContador()" title="Pause"><img src="/pause-btn.svg"></a>
+          <a id="botao4" onclick="zerar()" title="Restart"><img src="/restart-btn.svg"></a>
         </div>
     </section>
 
@@ -141,13 +145,14 @@
     </section>
 
     <script src="./main.js"></script>
+    <script src="./sw.js"></script>
     <script src="./script.js">
     $('#myModal').on('shown.bs.modal', function () {
     $('#myInput').trigger('focus')
 })
     </script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="./jquery-3.5.1.slim.min.js"></script>
+    <script src="./bootstrap.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
 </body>
 </html>

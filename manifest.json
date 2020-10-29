@@ -1,0 +1,23 @@
+{
+    "short_name": "PomoTimer!",
+    "name": "Pomotimer!: A pomodoro method app",
+    "icons": [
+    {
+    "src": "./img/logo4.png",
+    "type": "image/png",
+    "sizes": "192x192",
+    "purpose": "any maskable"
+    },
+    {
+    "src": "./img/logo3.png",
+    "type": "image/png",
+    "sizes": "512x512",
+    "purpose": "any maskable"
+    }
+    ],
+    "start_url": "/index.html",
+    "background_color": "#8F1D20",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "theme_color": "#8F1D20"
+    }
