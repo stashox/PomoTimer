@@ -12,8 +12,8 @@ if('serviceWorker' in navigator){
 const cacheName = "v1";
 
 const resourcesToPrecache = [
-    'PomoTimer/index.html',
-    '/',
+    './index.html',
+    './',
     './apple-touch-icon.png',
     './arrow-back.svg',
     './logo.png',
@@ -26,14 +26,14 @@ const resourcesToPrecache = [
     './play-btn.svg',
     './restart-btn.svg',
     './sound.wav',
-    'PomoTimer/estilomobile.css',
-    'PomoTimer/estilomobile2.css',
-    'PomoTimer/estilo.css',
-    'PomoTimer/bootstrap.min.css',
-    'PomoTimer/main.js',
-    'PomoTimer/script.js',
-    'PomoTimer/bootstrap.min.js',
-    'PomoTimer/jquery-3.5.1.slim.min.js',
+    './estilomobile.css',
+    './estilomobile2.css',
+    './estilo.css',
+    './bootstrap.min.css',
+    './main.js',
+    './script.js',
+    './bootstrap.min.js',
+    './jquery-3.5.1.slim.min.js',
 ];
 
 self.addEventListener('install', (event) => {
