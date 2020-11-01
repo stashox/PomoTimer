@@ -7,101 +7,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#8F1D20"/>
     <title id = "aba">PomoTimer!</title>
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="./bootstrap.min.css">
     <link rel="stylesheet" href="./estilo.css"> <!---mudança de layout conforme resolução-->
-    <link rel="stylesheet" media="screen and (max-width: 400px)" type="text/css" href="./estilomobile.css"/>
-    <link rel="stylesheet" media="screen and (min-width: 400px) and (max-width: 520px)" type="text/css" href="./estilomobile2.css"/>
     <link rel="manifest" href="./manifest.json">
-    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
 </head>
 <body id = "tudo">
+  <nav class="barra"> 
+    <div class="navesquerda">
+        <a onclick="window.location.reload()"><img src="./logo.png" class="logomarca" alt="logomarca"/></a>  
+    </div>
+    <div class="navdireita">
+        <ul>
+            <a onclick="openNav()"> <img class="menu" src="./tracos.svg" alt="menu"/> </a>
+        </ul>
+    </div>
+</nav>
+<!-- menu lateral -->
+<div id="mySidenav" class="sidenav" id="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a class="traco">
+    <a href="informacoes.html">Informações</a>
+    <a href="tutorial.html">Tutorial</a>
+    <a href="#sobre">Sobre</a>
+    <div class="final"><a class="copy">&copy; Pedro Franco</a></div>
+    <div class="fotos-nav">
+        <a href="//github.com/stashox"> <img src="./github.svg" alt="github" title="meu git hub" class="github"/> </a>
+        <a href="//www.instagram.com/pedrokfranco/"> <img src="./insta.svg" alt="instagram" title="meu instagram" class="insta"/> </a>
+    </div>    
+    </a>
+  </div>
   <audio src="./sound.wav" id="som"></audio>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <header class="topo">
         <img src="./logo2.png">
         <h1>PomoTimer!</h1>
     </header>
-    <section class="timer">
-        <div id = "brk">
-        </div>
-        <div id = "botoesextras">
-        <button type="button" class="btn btn-danger" id="inserirTempoBtn" data-toggle="modal" data-target="#pomodori">
-            Pomodori
-            </button>
-        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#break">
-            Break
-            </button>
-        </div>
-        <div class="modal fade" id="break" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="break">Break</h5>
-              </div>
-              <div class="modal-body" id = "brk">
-                <p>Escolha o seu <strong>BREAK</strong>!</p>
-                <input type="number" value="5" min="0" name="pp" id="pp"> </p>
-                <p>Escolha o seu <strong>LONG BREAK</strong>!</p>
-                <input type="number" value="15" min="0" name="lp" id="lp"> </p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="inserirBreak()">Começar!</button>
-              </div>
-            </div>
+    <section class="first-page">
+      <section class="timer">
+          <div id = "brk">
           </div>
-        </div>
-        </div>
-          <div class="modal fade" id="pomodori" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div id = "botoesextras">
+          <button type="button" class="btn btn-danger" id="inserirTempoBtn" data-toggle="modal" data-target="#pomodori">
+              Pomodori
+              </button>
+          <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#break">
+              Break
+              </button>
+          </div>
+          <div class="modal fade" id="break" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="pomodori">Counter</h5>
+                  <h5 class="modal-title" id="break">Break</h5>
                 </div>
-                <div class="modal-body" id = "contador">
-                <p>Escolha a duração de cada <strong>POMODORI</strong>!</p>
-                <input type="number" value="25" name="txtano" id="tempo" min = "0">
-                <p>Escolha a quantidade de <strong>CICLOS</strong>!</p>
-                <input type="number" value="4" name="txtciclo" id="ciclos" min = "0">
+                <div class="modal-body" id = "brk">
+                  <p>Escolha o seu <strong>BREAK</strong>!</p>
+                  <input type="number" value="5" min="0" name="pp" id="pp"> </p>
+                  <p>Escolha o seu <strong>LONG BREAK</strong>!</p>
+                  <input type="number" value="15" min="0" name="lp" id="lp"> </p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-                  <button type="button" id="btncomeçar" class="btn btn-danger" data-dismiss="modal" onclick="inserirTempo()">Começar!</button>
+                  <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="inserirBreak()">Começar!</button>
                 </div>
               </div>
             </div>
           </div>
-        <div id = "hrs">
-            <p>
-                <span id = "timer_minutos">25</span> :
-                <span id = "timer_segundos">00</span>
-            </p>
-        </div>
-        <div id = "botoes">
-          <a id="botao" onclick="startContador()" title="Play"><img src="play-btn.svg"></a>
-          <a id="botao2" onclick="pararContador()" title="Pause"><img src="pause-btn.svg"></a>
-          <a id="botao4" onclick="zerar()" title="Restart"><img src="restart-btn.svg"></a>
-        </div>
+          </div>
+            <div class="modal fade" id="pomodori" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="pomodori">Counter</h5>
+                  </div>
+                  <div class="modal-body" id = "contador">
+                  <p>Escolha a duração de cada <strong>POMODORI</strong>!</p>
+                  <input type="number" value="25" name="txtano" id="tempo" min = "0">
+                  <p>Escolha a quantidade de <strong>CICLOS</strong>!</p>
+                  <input type="number" value="4" name="txtciclo" id="ciclos" min = "0">
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                    <button type="button" id="btncomeçar" class="btn btn-danger" data-dismiss="modal" onclick="inserirTempo()">Começar!</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <div id = "hrs">
+              <p>
+                  <span id = "timer_minutos">25</span> :
+                  <span id = "timer_segundos">00</span>
+              </p>
+          </div>
+          <div id = "botoes">
+            <a id="botao" onclick="startContador()" title="Play"><img src="./play-btn.svg"></a>
+            <a id="botao2" onclick="pararContador()" title="Pause"><img src="./pause-btn.svg"></a>
+            <a id="botao4" onclick="zerar()" title="Restart"><img src="./restart-btn.svg"></a>
+          </div>
+      </section>
+  
+      <section class="container">
+        <h1>Lista de Tarefas</h1>
+        <p>
+          <input type="text" class="input-tarefas" name="tarefas" id="input-tarefa"> 
+          <button class="btn-tarefa">Adicionar</button>
+        </p>
+        <div class="tarefas"></div>
+      </section>
+  
+      <div id ="frase">
+        <p>"Mantenha o seu foco no melhor que você <br> 
+          possa imaginar e permita que uma visão <br> 
+          positiva o impulsione para frente!"<br>
+          -Jack Anderson</p>
+      </div>
     </section>
 
-    <section class="container">
-      <h1>Lista de Tarefas</h1>
-      <p>
-        <input type="text" class="input-tarefas" name="tarefas" id="input-tarefa"> 
-        <button class="btn-tarefa">Adicionar</button>
-      </p>
-      <div class="tarefas"></div>
-    </section>
-
-    <div id ="frase">
-      <p>"Mantenha o seu foco no melhor que você <br> 
-        possa imaginar e permita que uma visão <br> 
-        positiva o impulsione para frente!"<br>
-        -Jack Anderson</p>
-    </div>
-
-    <section class="infos">
+    <section id="infos" class="infos">
       <div class="info1">
         <h1>O que é o Método Pomodoro?</h1>
         <p>A Técnica Pomodoro é um método de manuseio de tempo e aumento foco desenvolvido por Francesco Cirillo no final dos anos 1980. A técnica consiste na utilização de um temporizador para dividir o trabalho em ciclos  de 25 minutos, separados por breves intervalos. O processo  consiste em focar numa tarefa por 25 minutos e, após esse tempo, decansar por 5. Após 4 ciclos de 25 minutos, orienta-se descansar por um período mais longo, de padrão 15 minutos. O método é empregado por diversas pessoas, seja para estudar ou trabalhar, principalmente as que costumam procrastinar, pois o método oferece curtos espaços de foco e frequentes descansos, tornando as atividades desempenhadas mais flexíveis. Para melhor aproveitamento do método, recomenda-se seguir rigorosamente os tempos, deixando de lado possíveis distrações. Como cada pessoa funciona diferente, o PomoTimer oferece a opção de personalização dos períodos de foco e de descanso, tal como o número de ciclos e a duração do <strong>Long Break</strong>.
@@ -109,7 +132,7 @@
       </div>
       <div class="info1">
         <h1>O que é o PomoTimer?</h1>
-        <p>PomoTimer é um aplicativo web open source desenvolvido por mim, Pedro Franco, como um projeto para fins de estudo. No ensejo, enxerguei a oportunidade não só de aumentar meu conhecimento com um projeto real, mas também de poder ajudar às pessoas da minha faixa etária, que estão estudando e precisam se organizar. Sempre estou disposto a ouvir o FeedBack dos usuários e implementar recursos novos. Caso queira saber como usar o PomoTimer, <a href="./tutorial.html">clique aqui</a>.
+        <p>PomoTimer é um aplicativo web open source desenvolvido por mim, Pedro Franco, como um projeto para fins de estudo. No ensejo, enxerguei a oportunidade não só de aumentar meu conhecimento com um projeto real, mas também de poder ajudar às pessoas da minha faixa etária, que estão estudando e precisam se organizar. Sempre estou disposto a ouvir o FeedBack dos usuários e implementar recursos novos. Caso queira saber como usar o PomoTimer, <a href="tutorial.html">clique aqui</a>.
         </p>
       </div>
       <div class="info1 dica">
@@ -143,8 +166,9 @@
         </p>
       </div>
     </section>
-    <script src="./sw.js"></script>
+
     <script src="./main.js"></script>
+    <script src="./sw.js"></script>
     <script src="./script.js">
     $('#myModal').on('shown.bs.modal', function () {
     $('#myInput').trigger('focus')
@@ -152,6 +176,5 @@
     </script>
     <script src="./jquery-3.5.1.slim.min.js"></script>
     <script src="./bootstrap.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
 </body>
 </html>
