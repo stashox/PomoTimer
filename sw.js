@@ -12,7 +12,6 @@ if('serviceWorker' in navigator){
 const cacheName = "v1";
 
 const resourcesToPrecache = [
-    '/index.html',
     '/',
     '/apple-touch-icon.png',
     '/img/apple-touch-icon.png',
@@ -30,7 +29,6 @@ const resourcesToPrecache = [
     '/img/insta.svg',
     '/img/tracos.svg',
     '/sound/sound.wav',
-    '/css/estilo.css',
     '/css/bootstrap.min.css',
     '/js/main.js',
     '/js/script.js',
