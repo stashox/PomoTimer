@@ -1,6 +1,6 @@
 {
     "short_name": "PomoTimer!",
-    "name": "Pomotimer!: A pomodoro method app",
+    "name": "Pomotimer!: Focus without procrastination ",
     "icons": [
     {
     "src": "./apple-touch-icon.png",
@@ -19,5 +19,5 @@
     "background_color": "#f7f7f7",
     "display": "fullscreen",
     "orientation": "portrait",
-    "theme_color": "#8F1D20" 
+    "theme_color": "#f7f7f7" 
     }
