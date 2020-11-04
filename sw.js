@@ -9,11 +9,10 @@ if('serviceWorker' in navigator){
     });
 }
 
-const cacheName = "v1";
+const cacheName = "v2";
 
 const resourcesToPrecache = [
     '/',
-    './apple-touch-icon.png',
     './apple-touch-icon.png',
     './arrow-back.svg',
     './logo.png',
@@ -34,6 +33,8 @@ const resourcesToPrecache = [
     './script.js',
     './bootstrap.min.js',
     './jquery-3.5.1.slim.min.js',
+    './index.html',
+    './estilo.css',
 ];
 
 self.addEventListener('install', (event) => {
