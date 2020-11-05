@@ -1,6 +1,6 @@
 Options -Indexes
 
-<Files .js>
+<Files sw.js>
     Order allow,deny
     Deny from all
 </Files>
