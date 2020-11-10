@@ -9,10 +9,11 @@ if('serviceWorker' in navigator){
     });
 }
 
-const cacheName = "v2.22";
+const cacheName = "v2.25";
 
 const resourcesToPrecache = [
     '/',
+    '/index.html',
     '/assets/img/apple-touch-icon.png',
     '/assets/img/arrow-back.svg',
     '/assets/img/logo.png',
@@ -28,13 +29,12 @@ const resourcesToPrecache = [
     '/assets/img/insta.svg',
     '/assets/img/tracos.svg',
     '/assets/sound.wav',
-    '/assets/css/bootstrap.min.css',
     '/assets/js/main.js',
     '/assets/js/script.js',
     '/assets/js/bootstrap.min.js',
     '/assets/js/jquery-3.5.1.slim.min.js',
-    '/index.html',
     '/assets/css/estilo.css',
+    '/assets/css/bootstrap.min.css',
 ];
 
 self.addEventListener('install', (event) => {
