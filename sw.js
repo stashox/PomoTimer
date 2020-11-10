@@ -9,7 +9,7 @@ if('serviceWorker' in navigator){
     });
 }
 
-const cacheName = "v2";
+const cacheName = "v2.1";
 
 const resourcesToPrecache = [
     './',
