@@ -1,6 +1,6 @@
 if('serviceWorker' in navigator){
     window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js')
+        navigator.serviceWorker.register('sw.js')
         .then((reg) => {
             console.log('Service Worker registrado', reg);
         }).catch((err) => {
@@ -9,10 +9,10 @@ if('serviceWorker' in navigator){
     });
 }
 
-const cacheName = "v2.2";
+const cacheName = "v2.22";
 
 const resourcesToPrecache = [
-    './',
+    '/',
     './assets/img/apple-touch-icon.png',
     './assets/img/arrow-back.svg',
     './assets/img/logo.png',
