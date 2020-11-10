@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <link rel="icon" href="./img/logo2.png">
-  </nav>
+    <link rel="icon" href="./assets/img/logo2.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#8F1D20"/>
+    <meta name="theme-color" content="#f7f7f7"/>
+    <meta name="description" content="Aumente seu foco e proatividade como o método Pomodoro. Personalize do seu jeito!">
+    <meta name="keywords" content="pomodoro, pomotimer, study, focus"/>
     <title id = "aba">PomoTimer!</title>
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/estilo.css"> <!---mudança de layout conforme resolução-->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/estilo.css"> <!---mudança de layout conforme resolução-->
     <link rel="manifest" href="./manifest.json">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 </head>
 <body id = "tudo">
   <nav class="barra"> 
     <div class="navesquerda">
-        <a onclick="window.location.reload()"><img src="./img/logo.png" class="logomarca" alt="logomarca"/></a>  
+        <a onclick="window.location.reload()"><img src="./assets/img/logo.png" class="logomarca" alt="logomarca"/></a>  
     </div>
     <div class="navdireita">
         <ul>
-            <a onclick="openNav()"> <img class="menu" src="/img/tracos.svg" alt="menu"/> </a>
+            <a onclick="openNav()"> <img class="menu" src="./assets/img/tracos.svg" alt="menu"/> </a>
         </ul>
     </div>
 </nav>
@@ -29,18 +30,17 @@
     <a class="traco">
     <a href="informacoes.html">Informações</a>
     <a href="tutorial.html">Tutorial</a>
-    <a href="#sobre">Sobre</a>
     <div class="final"><a class="copy">&copy; Pedro Franco</a></div>
     <div class="fotos-nav">
-        <a href="//github.com/stashox"> <img src="/img/github.svg" alt="github" title="meu git hub" class="github"/> </a>
-        <a href="//www.instagram.com/pedrokfranco/"> <img src="/img/insta.svg" alt="instagram" title="meu instagram" class="insta"/> </a>
+        <a href="//github.com/stashox"> <img src="./assets/img/github.svg" alt="github" title="meu git hub" class="github"/> </a>
+        <a href="//www.instagram.com/pedrokfranco/"> <img src="./assets/img/insta.svg" alt="instagram" title="meu instagram" class="insta"/> </a>
     </div>    
     </a>
   </div>
-  <audio src="./sound/sound.wav" id="som"></audio>
+  <audio src="./assets/sound.wav" id="som"></audio>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <header class="topo">
-        <img src="/img/logo2.png">
+        <img src="./assets/img/logo2.png">
         <h1>PomoTimer!</h1>
     </header>
     <section class="first-page">
@@ -101,9 +101,9 @@
               </p>
           </div>
           <div id = "botoes">
-            <a id="botao" onclick="startContador()" title="Play"><img src="img/play-btn.svg"></a>
-            <a id="botao2" onclick="pararContador()" title="Pause"><img src="img/pause-btn.svg"></a>
-            <a id="botao4" onclick="zerar()" title="Restart"><img src="img/restart-btn.svg"></a>
+            <a id="botao" onclick="startContador()" title="Play"><img src="./assets/img/play-btn.svg"></a>
+            <a id="botao2" onclick="pararContador()" title="Pause"><img src="./assets/img/pause-btn.svg"></a>
+            <a id="botao4" onclick="zerar()" title="Restart"><img src="./assets/img/restart-btn.svg"></a>
           </div>
       </section>
   
@@ -167,14 +167,14 @@
       </div>
     </section>
 
-    <script src="./js/main.js"></script>
+    <script src="./assets/js/main.js"></script>
     <script src="./sw.js"></script>
-    <script src="./js/script.js">
+    <script src="./assets/js/script.js">
     $('#myModal').on('shown.bs.modal', function () {
     $('#myInput').trigger('focus')
 })
     </script>
-    <script src="./js/jquery-3.5.1.slim.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
+    <script src="./assets/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
 </body>
 </html>

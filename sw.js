@@ -1,6 +1,6 @@
 if('serviceWorker' in navigator){
     window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
+        navigator.serviceWorker.register('./sw.js')
         .then((reg) => {
             console.log('Service Worker registrado', reg);
         }).catch((err) => {
@@ -9,33 +9,32 @@ if('serviceWorker' in navigator){
     });
 }
 
-const cacheName = "v1";
+const cacheName = "v2.2";
 
 const resourcesToPrecache = [
-    '/index.html',
-    '/',
-    '/apple-touch-icon.png',
-    '/img/apple-touch-icon.png',
-    '/img/arrow-back.svg',
-    '/img/logo.png',
-    '/img/logo2.png',
-    '/img/logo3.png',
-    '/img/logo4.png',
-    '/img/pause-btn.svg',
-    '/img/tuto1.png',
-    '/img/tuto2.png',
-    '/img/play-btn.svg',
-    '/img/restart-btn.svg',
-    '/img/github.svg',
-    '/img/insta.svg',
-    '/img/tracos.svg',
-    '/sound/sound.wav',
-    '/css/estilo.css',
-    '/css/bootstrap.min.css',
-    '/js/main.js',
-    '/js/script.js',
-    '/js/bootstrap.min.js',
-    '/js/jquery-3.5.1.slim.min.js',
+    './',
+    './assets/img/apple-touch-icon.png',
+    './assets/img/arrow-back.svg',
+    './assets/img/logo.png',
+    './assets/img/logo2.png',
+    './assets/img/logo3.png',
+    './assets/img/logo4.png',
+    './assets/img/pause-btn.svg',
+    './assets/img/tuto1.png',
+    './assets/img/tuto2.png',
+    './assets/img/play-btn.svg',
+    './assets/img/restart-btn.svg',
+    './assets/img/github.svg',
+    './assets/img/insta.svg',
+    './assets/img/tracos.svg',
+    './assets/sound.wav',
+    './assets/css/bootstrap.min.css',
+    './assets/js/main.js',
+    './assets/js/script.js',
+    './assets/js/bootstrap.min.js',
+    './assets/js/jquery-3.5.1.slim.min.js',
+    './index.html',
+    './assets/css/estilo.css',
 ];
 
 self.addEventListener('install', (event) => {
